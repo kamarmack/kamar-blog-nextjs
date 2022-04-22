@@ -4,7 +4,7 @@ const siteConfig: SiteConfig = {
 	siteUrl: 'https://kamar.codes',
 	siteName: 'Kamar Mack',
 	siteDescription:
-		"Kamar Mack's Portfolio & Blog Site, built with Next.js, MDX, and Tailwind CSS.",
+		'My personal site showcases my programming highlight tape and features a flood of blog posts where I rank all the music and anime series I like best.',
 	siteThumbnail: '/og-image.jpg',
 	nav: [
 		{ label: 'Tech', href: '/posts/tagged/tech' },
@@ -14,9 +14,8 @@ const siteConfig: SiteConfig = {
 	social: {
 		github: 'https://github.com/kamarmack',
 		twitter: 'https://twitter.com/mackgevanni',
-		linkedin: 'https://www.linkedin.com/in/kamarmack/',
+		linkedin: 'https://www.linkedin.com/in/kamar-mack/',
 		instagram: 'https://www.instagram.com/mackgevanni/',
-		email: 'kamarmack112@gmail.com',
 	},
 };
 export default siteConfig;
