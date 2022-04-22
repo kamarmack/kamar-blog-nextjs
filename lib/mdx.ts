@@ -5,7 +5,7 @@ import type { MDXFrontMatter } from '@/lib/types';
 
 const root = process.cwd();
 
-export const postsPath = path.join(root, `../posts`);
+export const postsPath = path.join(root, '../posts');
 
 export const getMdx = (fileName: string) => {
 	const fullPath = path.join(postsPath, fileName);
@@ -23,7 +23,10 @@ export const getMdx = (fileName: string) => {
 };
 
 export const getAllMdx = () => {
-	const items = fs.readdirSync(postsPath).map((item) => getMdx(item));
+	const items = fs
+		.readdirSync(postsPath)
+		.filter((item) => !item.includes('.git'))
+		.map((item) => getMdx(item));
 	return items.sort(
 		(a, b) =>
 			new Date(b.frontMatter.date).getTime() -
