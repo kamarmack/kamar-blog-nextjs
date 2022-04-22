@@ -1,0 +1,26 @@
+{
+	"extends": [
+		"next/core-web-vitals",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:import/recommended",
+		"plugin:import/typescript",
+		"plugin:node/recommended",
+		"plugin:promise/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"tsconfigRootDir": ".",
+		"project": ["tsconfig.json"]
+	},
+	"plugins": ["@typescript-eslint"],
+	"root": true,
+	"rules": {
+		"@typescript-eslint/switch-exhaustiveness-check": ["error"],
+		"node/no-missing-import": ["off"],
+		"node/no-unsupported-features/es-syntax": ["off"],
+		"react/no-unescaped-entities": ["off"]
+	}
+}
