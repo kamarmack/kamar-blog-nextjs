@@ -25,7 +25,7 @@ export const getMdx = (fileName: string) => {
 export const getAllMdx = () => {
 	const items = fs
 		.readdirSync(postsPath)
-		.filter((item) => !item.includes('.git'))
+		.filter((item) => item.endsWith('.mdx'))
 		.map((item) => getMdx(item));
 	return items.sort(
 		(a, b) =>
