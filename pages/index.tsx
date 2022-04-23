@@ -9,8 +9,11 @@ const Home: NextPage = () => {
 			<Page
 				browserTitle="Home"
 				title="What's up, my name's Kamar 👋🏾"
-				description="My personal site showcases my programming highlight tape and features a flood of blog posts where I rank all the music and anime series I like best."
-				img>
+				description="My personal site showcases my programming highlight tape and features a flood of blog posts where I rank the music and anime series I like best."
+				img_alt="Kamar Mack headshot"
+				img_height={225}
+				img_src="/img/home/headshot.jpg"
+				img_width={518}>
 				<Prose>
 					<p>
 						<strong>
@@ -20,17 +23,17 @@ const Home: NextPage = () => {
 					<p>
 						<ul>
 							<li>
-								I grew up in Memphis, TN, but I was born in the UK like{' '}
+								I was born in the UK like{' '}
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://youtu.be/aVoKeHRQVlE?t=83">
 									21 Savage
-								</a>
-								.
+								</a>{' '}
+								but grew up in Memphis, TN.
 							</li>
 							<li>
-								In 2014 I decided to start coding after taking{' '}
+								In 2014, I decided to learn coding after taking{' '}
 								<Link href="http://localhost:3000/posts/why-i-started-programming">
 									an interesting high school math class
 								</Link>{' '}
@@ -38,22 +41,23 @@ const Home: NextPage = () => {
 							</li>
 							<li>
 								My favorite programming language is TypeScript. I have
-								development experience writing TS in frontend React apps (like{' '}
+								development experience writing TS in frontend React apps – e.g.{' '}
 								<a
 									target="_blank"
 									rel="noreferrer"
 									href="https://github.com/kamarmack/kamar-codes-nextjs">
 									this very website
 								</a>{' '}
-								which is built with Next.js, MDX, and Tailwind CSS) and in
-								backend Express apps.
+								which I built with Next.js, MDX, and Tailwind CSS – and backend
+								Express apps.
 							</li>
 							<li>
-								As a side project I created an open source tool called{' '}
+								As a side project I created an open source dev tool called{' '}
 								<Link href="/posts/introducing-happy-typescript">
 									Happy TypeScript
 								</Link>{' '}
-								that helps other TS devs work more efficiently.
+								that helps programmers work more efficiently on their TS
+								projects.
 							</li>
 							<li>
 								The name <i>Kamar</i> roughly translates to <i>moon</i> in

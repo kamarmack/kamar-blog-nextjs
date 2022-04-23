@@ -8,7 +8,10 @@ import { cx } from '@/lib/utils';
 
 interface PageProps {
 	date?: string;
-	img?: boolean;
+	img_alt?: string;
+	img_height?: number;
+	img_src?: string;
+	img_width?: number;
 	browserTitle?: string | React.ReactNode;
 	title: string | React.ReactNode;
 	description?: string | React.ReactNode;
@@ -21,7 +24,10 @@ export const Page: React.FC<PageProps> = ({
 	title,
 	description,
 	thumbnail,
-	img,
+	img_alt,
+	img_height,
+	img_src,
+	img_width,
 	children,
 }) => {
 	const metaTitle = onlyText(browserTitle || title);
@@ -50,22 +56,28 @@ export const Page: React.FC<PageProps> = ({
 					'border-gray-200',
 					'dark:border-gray-700',
 				)}>
-				{date ? (
-					<time
-						className={cx('block mb-2', 'text-gray-500', 'dark:text-gray-400')}>
-						{formatDate(date)}
-					</time>
-				) : null}
 				<h1 className="font-bold text-3xl">{title}</h1>
-				{img && (
+				{date ? (
+					<div className="mt-1">
+						{metaTitle === 'Home' ? null : (
+							<p>
+								Kamar Mack &#183;{' '}
+								<time className={cx('', 'text-gray-500', 'dark:text-gray-400')}>
+									{formatDate(date)}
+								</time>
+							</p>
+						)}
+					</div>
+				) : null}
+				{!!(img_height && img_src && img_width) && (
 					<div className="mt-4">
 						<Image
 							className="rounded-md"
-							src="/headshot.jpg"
+							src={img_src}
 							layout="responsive"
-							width={518}
-							height={225}
-							alt="Kamar Mack headshot"
+							width={img_width}
+							height={img_height}
+							alt={img_alt || `${siteConfig.siteName}`}
 							priority
 						/>
 					</div>

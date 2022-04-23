@@ -29,11 +29,31 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
 			<Page {...frontMatter}>
 				<Prose>
 					<MDXRemote {...mdx} components={components} />
+					<hr />
+					<div
+						style={{
+							marginLeft: 'auto',
+							marginRight: 'auto',
+							textAlign: 'center',
+							width: '80%',
+						}}>
+						<i>
+							<p>
+								<strong>About me</strong>
+							</p>
+							<p>
+								I'm Kamar, a software engineer from Memphis, TN – I specialize
+								in frontend React and server-side NodeJS development. Thanks for
+								reading!
+							</p>
+						</i>
+					</div>
+					<br />
 				</Prose>
 				{previous || next ? (
 					<nav
 						className={cx(
-							'mt-8 pt-8 grid grid-cols-2 gap-8 border-t',
+							'pt-8 grid grid-cols-2 gap-8 border-t',
 							'border-gray-200',
 							'dark:border-gray-700',
 						)}>
@@ -107,8 +127,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		props: {
 			frontMatter,
 			mdx: mdxContent,
-			previous: null,
-			next: mdxFiles[postIndex - 1]?.frontMatter || null,
+			previous: mdxFiles[postIndex - 1]?.frontMatter || null,
+			next: mdxFiles[postIndex + 1]?.frontMatter || null,
 		},
 	};
 };
