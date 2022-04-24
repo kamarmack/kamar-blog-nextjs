@@ -27,9 +27,17 @@ export const getAllMdx = () => {
 		.readdirSync(postsPath)
 		.filter((item) => item.endsWith('.mdx'))
 		.map((item) => getMdx(item));
-	return items.sort(
-		(a, b) =>
-			new Date(b.frontMatter.date).getTime() -
-			new Date(a.frontMatter.date).getTime(),
-	);
+	return items.sort(function (a, b) {
+		const a_date = a.frontMatter.date;
+		const b_date = b.frontMatter.date;
+		const a_is_date = !a_date.toLowerCase().includes('soon');
+		const b_is_date = !b_date.toLowerCase().includes('soon');
+		if (a_is_date && b_is_date) {
+			return new Date(b_date).getTime() - new Date(a_date).getTime();
+		}
+		if (!a_is_date && !b_is_date) {
+			return a.frontMatter.title.localeCompare(b.frontMatter.title);
+		}
+		return a_is_date ? 1 : -1;
+	});
 };

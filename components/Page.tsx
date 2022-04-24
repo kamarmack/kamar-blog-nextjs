@@ -14,6 +14,7 @@ interface PageProps {
 	img_width?: number;
 	browserTitle?: string | React.ReactNode;
 	title: string | React.ReactNode;
+	browserDescription?: string | React.ReactNode;
 	description?: string | React.ReactNode;
 	thumbnail?: string;
 }
@@ -22,6 +23,7 @@ export const Page: React.FC<PageProps> = ({
 	date,
 	browserTitle,
 	title,
+	browserDescription,
 	description,
 	thumbnail,
 	img_alt,
@@ -31,9 +33,8 @@ export const Page: React.FC<PageProps> = ({
 	children,
 }) => {
 	const metaTitle = onlyText(browserTitle || title);
-	const metaDescription = description
-		? onlyText(description)
-		: siteConfig.siteDescription;
+	const desc = browserDescription || description;
+	const metaDescription = desc ? onlyText(desc) : siteConfig.siteDescription;
 	const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail;
 	return (
 		<>

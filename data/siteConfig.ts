@@ -7,9 +7,9 @@ const siteConfig: SiteConfig = {
 		'My personal site showcases my programming highlight tape and features a flood of blog posts where I rank the music and anime series I like best.',
 	siteThumbnail: '/og-image.jpg',
 	nav: [
-		{ label: 'Tech', href: '/posts/tagged/tech' },
-		{ label: 'Music', href: '/posts/tagged/music' },
-		{ label: 'Anime', href: '/posts/tagged/anime' },
+		{ label: 'Projects', href: '/posts/tagged/projects' },
+		{ label: 'Blog', href: '/posts' },
+		{ label: 'Contact', href: '/contact' },
 	],
 	social: {
 		github: 'https://github.com/kamarmack',

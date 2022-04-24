@@ -9,7 +9,8 @@ const Home: NextPage = () => {
 			<Page
 				browserTitle="Home"
 				title="What's up, my name's Kamar 👋🏾"
-				description="My personal site showcases my programming highlight tape and features a flood of blog posts where I rank the music and anime series I like best."
+				browserDescription="My personal site showcases my programming highlight tape and features a flood of blog posts where I rank the music and anime series I like best."
+				description=""
 				img_alt="Kamar Mack headshot"
 				img_height={225}
 				img_src="/img/home/headshot.jpg"
@@ -65,7 +66,7 @@ const Home: NextPage = () => {
 							</li>
 						</ul>
 					</p>
-					<hr />
+					{/* <hr />
 					<p>
 						<strong>
 							<i>If you want to get in touch</i>
@@ -74,7 +75,7 @@ const Home: NextPage = () => {
 					<p>
 						Feel free to drop me a line &#8594;{' '}
 						<code>kamarmack112 at gmail dot com</code>
-					</p>
+					</p> */}
 				</Prose>
 			</Page>
 		</>
