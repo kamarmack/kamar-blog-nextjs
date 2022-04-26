@@ -2,6 +2,7 @@ import { Twitter, Instagram, GitHub, Linkedin } from 'react-feather';
 import siteConfig from '@/data/siteConfig';
 import { cx } from '@/lib/utils';
 import { ThemeSelect } from '@/components/ThemeSelect';
+import { Prose } from './Prose';
 
 const iconProps = { className: 'w-4 h-4' };
 
@@ -13,6 +14,7 @@ const SOCIAL_ICONS: { [key: string]: React.ReactNode } = {
 };
 
 export const Footer: React.FC = () => {
+	const year = new Date().getFullYear().toString();
 	return (
 		<div className="mt-auto py-8">
 			<hr />
@@ -42,6 +44,14 @@ export const Footer: React.FC = () => {
 				<div className="mt-8 flex justify-center">
 					<ThemeSelect />
 				</div>
+				<Prose>
+					<p className="mt-8" style={{ textAlign: 'center' }}>
+						©{year} – Created by&nbsp;
+						<a target="_blank" rel="noreferrer" href="https://kamar.codes">
+							👨🏾‍💻 Kamar Mack
+						</a>
+					</p>
+				</Prose>
 			</footer>
 		</div>
 	);
