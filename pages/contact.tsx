@@ -9,9 +9,9 @@ const Contact: NextPage = () => {
 				title="Contact"
 				description="If you want to get in touch, feel free to drop me a line">
 				<Prose>
-					<p>
-						<code>kamarmack112 at gmail dot com</code>
-					</p>
+					<h3>
+						✉️ &nbsp; <code>kamarmack112 at gmail dot com</code>
+					</h3>
 				</Prose>
 			</Page>
 		</>

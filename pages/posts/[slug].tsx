@@ -68,7 +68,7 @@ const Post: NextPage<PostProps> = ({ frontMatter, mdx, previous, next }) => {
 									Previous
 								</p>
 								<Link href={`/posts/${previous?.slug}`}>
-									<a className="font-bold">{previous?.title}</a>
+									<a className="font-bold"> &#8592; {previous?.title}</a>
 								</Link>
 							</div>
 						) : null}
