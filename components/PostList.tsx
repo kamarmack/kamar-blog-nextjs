@@ -16,7 +16,8 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
 				'divide-y -my-8',
 				'divide-gray-200',
 				'dark:divide-gray-700',
-			)}>
+			)}
+		>
 			{posts.map((post, index) => {
 				return (
 					<li className="py-8" key={index}>
@@ -26,7 +27,8 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
 									'block mb-2',
 									'text-gray-500',
 									'dark:text-gray-400',
-								)}>
+								)}
+							>
 								{formatDate(post.date)}
 							</time>
 							<h2 className="font-bold text-xl">
