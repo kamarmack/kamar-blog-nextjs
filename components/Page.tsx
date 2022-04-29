@@ -7,6 +7,7 @@ import { Prose } from '@/components/Prose';
 import { cx } from '@/lib/utils';
 
 interface PageProps {
+	custom_header_description?: boolean;
 	date?: string;
 	img_alt?: string;
 	img_height?: number;
@@ -20,6 +21,7 @@ interface PageProps {
 }
 
 export const Page: React.FC<PageProps> = ({
+	custom_header_description,
 	date,
 	browserTitle,
 	title,
@@ -52,18 +54,23 @@ export const Page: React.FC<PageProps> = ({
 				/>
 			</Head>
 			<header
-				className={cx(
-					'mb-8 pb-8 border-b',
-					'border-gray-200',
-					'dark:border-gray-700',
-				)}>
+				className={
+					custom_header_description
+						? ''
+						: cx(
+								'mb-8 pb-8 border-b',
+								'border-gray-200',
+								'dark:border-gray-700',
+						  )
+				}
+			>
 				<h1 className="font-bold text-3xl">{title}</h1>
 				{date ? (
 					<div className="mt-1">
 						{metaTitle === 'Home' ? null : (
 							<p>
 								Kamar Mack &#183;{' '}
-								<time className={cx('', 'text-gray-500', 'dark:text-gray-400')}>
+								<time className={cx('text-gray-500', 'dark:text-gray-400')}>
 									{formatDate(date)}
 								</time>
 							</p>
@@ -87,7 +94,9 @@ export const Page: React.FC<PageProps> = ({
 					<div className="mt-4">
 						<Prose>
 							{typeof description === 'string' ? (
-								<p>{description}</p>
+								<p>
+									<i>{description}</i>
+								</p>
 							) : (
 								description
 							)}
