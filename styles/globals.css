@@ -182,11 +182,3 @@ pre[class*='language-'] {
 	:where(blockquote p:last-of-type):not(:where([class~='not-prose'] *))::after {
 	content: '';
 }
-
-.prose a {
-	@apply text-blue-900 dark:text-blue-600;
-}
-
-.prose a:hover {
-	@apply opacity-90;
-}
