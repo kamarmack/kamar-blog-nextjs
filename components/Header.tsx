@@ -34,8 +34,9 @@ export const Header: React.FC = () => {
 							const isActive = item.href === pathname;
 							return (
 								<li key={index}>
-									<Link href={item.href}>
+									<Link passHref href={item.href}>
 										<a
+											href={item.href}
 											aria-current={isActive ? 'page' : undefined}
 											className={cx(
 												'text-gray-500 hover:text-gray-900',

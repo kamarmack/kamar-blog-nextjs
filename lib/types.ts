@@ -1,9 +1,14 @@
 export type SiteConfig = {
+	author: string;
 	avatar?: string;
 	siteUrl: string;
 	siteName: string;
 	siteDescription: string;
 	siteThumbnail: string;
+	siteThumbnailAlt: string;
+	siteThumbnailHeight: number;
+	siteThumbnailType: string;
+	siteThumbnailWidth: number;
 	nav: Array<{ label: string; href: string }>;
 	social?: {
 		email?: string;

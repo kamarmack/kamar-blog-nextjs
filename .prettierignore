@@ -21,6 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebase-debug.log*
+firebase-debug.*.log*
 
 # local env files
 .env.local
@@ -36,3 +38,9 @@ yarn-error.log*
 
 # markdown
 *.mdx
+
+# Firebase cache
+.firebase/
+
+# Firebase config
+.firebaserc

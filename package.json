@@ -72,7 +72,12 @@
 	"scripts": {
 		"dev": "next dev",
 		"dev:watch": "next-remote-watch ../posts",
-		"build": "next build",
+		"clean-cache": "rm -rf .next",
+		"clean-deps": "rm -rf node_modules",
+		"clean-export": "rm -rf out",
+		"clean-build": "npm run clean-cache && npm run clean-export",
+		"prebuild": "npm run clean-build",
+		"build": "next build && next export",
 		"start": "next start",
 		"ts-silent-build": "tsc --project ./tsconfig.json --noEmit",
 		"prelint": "npm run ts-silent-build",
@@ -86,7 +91,7 @@
 		"postsync": "npm run push-local-changes",
 		"preversion": "npm run validate",
 		"version": "auto-changelog -p && npm run stage-local-changes",
-		"postversion": "npm run push-local-changes && npm run build && echo 'Missing deployment script'"
+		"postversion": "npm run push-local-changes && npm run build && firebase deploy"
 	},
 	"version": "1.0.0-alpha.0"
 }
