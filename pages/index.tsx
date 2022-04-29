@@ -10,7 +10,8 @@ const Home: NextPage = () => {
 			<Page
 				browserTitle="Home"
 				title="What's up, my name's Kamar 👋🏾"
-				description="I'm a software engineer passionate about building breakthrough tools for other developers.">
+				description="I'm a software engineer who loves working on breakthrough developer tools"
+			>
 				<Prose>
 					<p>
 						<strong>
@@ -20,19 +21,27 @@ const Home: NextPage = () => {
 					<p>
 						<ul>
 							<li>
-								I decided to learn coding in 2014 after taking{' '}
+								I decided to learn coding after taking{' '}
 								<Link href="/posts/why-i-started-programming">
 									an interesting high school math class
 								</Link>{' '}
-								– ever since then I've been in love with the craft.
+								back in 2014, and I've been obsessed with the craft ever since.
 							</li>
 							<li>
-								Previously I studied CS at Georgetown, worked at Wolfram, and
-								launched a software company called{' '}
+								Previously I worked at{' '}
 								<a
 									target="_blank"
 									rel="noreferrer"
-									href="https://www.crunchbase.com/organization/appdrop-fdc6">
+									href="https://www.wolfram.com/"
+								>
+									Wolfram
+								</a>{' '}
+								and launched a software company called{' '}
+								<a
+									target="_blank"
+									rel="noreferrer"
+									href="https://www.crunchbase.com/organization/appdrop-fdc6"
+								>
 									Appdrop
 								</a>
 								.
@@ -40,44 +49,57 @@ const Home: NextPage = () => {
 							<li>
 								My favorite programming language is TypeScript. I have
 								development experience writing TS in frontend React apps
-								<sup id="fn1">&#8224;</sup> and server-side Express apps.
+								<a
+									href={`#details-nextjs-repo`}
+									id={`footnote-nextjs-repo`}
+									style={{ textDecoration: 'none' }}
+								>
+									<sup>&#8224;</sup>
+								</a>{' '}
+								and server-side Express apps.
 							</li>
 							<li>
-								As a recent open source project I built a command line tool
-								called{' '}
-								<Link href="/posts/introducing-happy-typescript">
-									Happy TypeScript
-								</Link>{' '}
-								that helps programmers work more efficiently on TS projects.
+								As a recent open source project I created a command line tool
+								called <Link href="/posts/introducing-hats">HaTs</Link> that
+								helps programmers work more efficiently on TypeScript projects.
 							</li>
 							<li>
 								I was born in the UK like{' '}
 								<a
 									target="_blank"
 									rel="noreferrer"
-									href="https://youtu.be/aVoKeHRQVlE?t=83">
+									href="https://youtu.be/aVoKeHRQVlE?t=83"
+								>
 									21 Savage
 								</a>{' '}
 								but grew up in Memphis, TN.
 							</li>
 							<li>
 								The name <i>Kamar</i> roughly translates to <i>moon</i> in
-								arabic. As a result I am nocturnal.
+								arabic. As a result I'm nocturnal.
 							</li>
 						</ul>
 						_____
 					</p>
 					<div
-						id="1"
+						id="details-nextjs-repo"
 						style={{
 							fontSize: 'x-small',
-						}}>
-						&#8224; For instance – I used Next.js, MDX, and Tailwind CSS as my
-						tech stack to build this very site. Check out the{' '}
+						}}
+					>
+						<a
+							href={`#footnote-nextjs-repo`}
+							style={{ textDecoration: 'none' }}
+						>
+							&#8224;
+						</a>{' '}
+						I built this very site using Next.js, MDX, and Tailwind CSS. Check
+						out the{' '}
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://github.com/kamarmack/kamar-codes-nextjs">
+							href="https://github.com/kamarmack/mackbook-io-nextjs"
+						>
 							source code
 						</a>{' '}
 						on GitHub 🚀
@@ -89,11 +111,19 @@ const Home: NextPage = () => {
 							src={'/img/home/headshot.jpg'}
 							width={2048}
 							height={2560}
-							alt={'Kamar Mack headshot'}
+							alt={'Kamar Mack and Jack the Bulldog'}
 							priority
 						/>
 						<figcaption>
-							Throwback shot of me {'&'} Jack the Bulldog 🐶
+							ca. 2017 at a photoshoot with my home dog{' '}
+							<a
+								target="_blank"
+								rel="noreferrer"
+								href="https://www.georgetown.edu/jack-the-bulldog/"
+							>
+								Jack
+							</a>{' '}
+							🐶
 						</figcaption>
 					</figure>
 				</Prose>
