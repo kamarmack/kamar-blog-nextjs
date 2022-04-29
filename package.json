@@ -93,5 +93,5 @@
 		"version": "auto-changelog -p && npm run stage-local-changes",
 		"postversion": "npm run push-local-changes && npm run build && firebase deploy"
 	},
-	"version": "1.0.0-alpha.0"
+	"version": "1.0.0"
 }
