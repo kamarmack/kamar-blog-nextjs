@@ -7,7 +7,8 @@ const Contact: NextPage = () => {
 		<>
 			<Page
 				title="Contact"
-				description="If you want to get in touch, feel free to drop me a line">
+				description="If you want to get in touch, feel free to drop me a line"
+			>
 				<Prose>
 					<h3>
 						✉️ &nbsp; <code>kamarmack112 at gmail dot com</code>

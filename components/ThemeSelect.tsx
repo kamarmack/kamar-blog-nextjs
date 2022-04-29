@@ -40,12 +40,14 @@ export const ThemeSelect = () => {
 				className={cx(
 					'absolute top-1/2 -translate-y-1/2 left-2 pointer-events-none',
 					'opacity-50',
-				)}>
+				)}
+			>
 				{THEME_MAP[activeTheme || '']?.icon}
 			</span>
 			<span
 				aria-hidden={true}
-				className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
+				className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none"
+			>
 				<Code width=".9em" className="rotate-90 opacity-50" />
 			</span>
 			<select
@@ -56,7 +58,8 @@ export const ThemeSelect = () => {
 					'dark:bg-gray-800 dark:border-gray-700',
 				)}
 				onChange={handleChange}
-				value={activeTheme}>
+				value={activeTheme}
+			>
 				{themes.map((theme) => {
 					return (
 						<option key={theme} value={theme}>

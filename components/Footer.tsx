@@ -33,7 +33,8 @@ export const Footer: React.FC = () => {
 											'bg-gray-900 text-gray-50',
 											'dark:bg-gray-800 dark:text-gray-50',
 										)}
-										title={key}>
+										title={key}
+									>
 										{SOCIAL_ICONS[key]}
 									</a>
 								</li>
@@ -47,7 +48,7 @@ export const Footer: React.FC = () => {
 				<Prose>
 					<p className="mt-8" style={{ textAlign: 'center' }}>
 						©{year} – Created by&nbsp;
-						<a target="_blank" rel="noreferrer" href="https://kamar.codes">
+						<a target="_blank" rel="noreferrer" href="https://mackbook.io">
 							👨🏾‍💻 Kamar Mack
 						</a>
 					</p>

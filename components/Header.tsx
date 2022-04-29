@@ -40,7 +40,8 @@ export const Header: React.FC = () => {
 											className={cx(
 												'text-gray-500 hover:text-gray-900',
 												'dark:text-gray-400 dark:hover:text-gray-300',
-											)}>
+											)}
+										>
 											{item.label}
 										</a>
 									</Link>
