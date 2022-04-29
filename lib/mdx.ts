@@ -13,11 +13,29 @@ export const getMdx = (fileName: string) => {
 
 	const { data, content } = matter(docSource);
 
+	const { title, date } = data;
+	if (
+		!(title && typeof title === 'string' && date && typeof date === 'string')
+	) {
+		throw new Error('missing date or title');
+	}
+
+	const regex = /<FootnoteLink\s+id="\w+"\s+\/>/g;
+	const found = content.match(regex) || [];
+	const footnote_ids = found.map((match) =>
+		match.replace('<FootnoteLink id="', '').replace('" />', ''),
+	);
+
+	const frontMatter: MDXFrontMatter = {
+		...data,
+		title,
+		date,
+		footnote_ids,
+		slug: fileName.replace('.mdx', ''),
+	};
+
 	return {
-		frontMatter: {
-			...data,
-			slug: fileName.replace('.mdx', ''),
-		} as MDXFrontMatter,
+		frontMatter,
 		content,
 	};
 };
