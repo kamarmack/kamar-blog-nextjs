@@ -1,8 +1,8 @@
-# kamar-codes-nextjs
+# mackbook-io-nextjs
 
 ## Demo
 
-View the site live at [https://kamar.codes](https://kamar.codes)
+View the site live at [https://mackbook.io](https://mackbook.io)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -30,8 +30,8 @@ Stack:
 ## Running the Site Locally
 
 ```bash
-$ git clone https://github.com/kamarmack/kamar-codes-nextjs
-$ cd kamar-codes-nextjs
+$ git clone https://github.com/kamarmack/mackbook-io-nextjs
+$ cd mackbook-io-nextjs
 $ npm i
 $ npm run dev:watch
 ```

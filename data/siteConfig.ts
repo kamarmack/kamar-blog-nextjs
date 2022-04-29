@@ -1,7 +1,7 @@
 import type { SiteConfig } from '@/lib/types';
 const siteConfig: SiteConfig = {
 	avatar: '/avatar.jpg',
-	siteUrl: 'https://kamar.codes',
+	siteUrl: 'https://mackbook.io',
 	siteName: 'Kamar Mack',
 	siteDescription:
 		'My personal site showcases my programming highlight tape and features a flood of blog posts where I rank the music and anime series I like best.',
