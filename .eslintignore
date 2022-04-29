@@ -33,3 +33,7 @@ yarn-error.log*
 
 # markdown
 *.mdx
+
+# Tailwind config files
+tailwind.config.js
+postcss.config.js
