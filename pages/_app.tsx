@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 
 	useEffect(() => {
-		if (typeof window !== 'undefined') {
+		if (global.window && typeof window !== 'undefined') {
 			const handleRouteChange = (url: string) => {
 				gtag.pageview(url);
 			};
