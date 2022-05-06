@@ -1,5 +1,7 @@
 # mackbook-io-nextjs
 
+![mackbook.io homepage](https://github.com/kamarmack/markdown-imgs/blob/master/images/mackbook-io-homepage.jpg?raw=true)
+
 ## Demo
 
 View the site live at [https://mackbook.io](https://mackbook.io)
