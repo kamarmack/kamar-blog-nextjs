@@ -12,15 +12,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 
 	useEffect(() => {
-		const handleRouteChange = (url: string) => {
-			gtag.pageview(url);
-		};
-		router.events.on('routeChangeComplete', handleRouteChange);
-		router.events.on('hashChangeComplete', handleRouteChange);
-		return () => {
-			router.events.off('routeChangeComplete', handleRouteChange);
-			router.events.off('hashChangeComplete', handleRouteChange);
-		};
+		if (typeof window !== 'undefined') {
+			const handleRouteChange = (url: string) => {
+				gtag.pageview(url);
+			};
+			router.events.on('routeChangeComplete', handleRouteChange);
+			router.events.on('hashChangeComplete', handleRouteChange);
+			return () => {
+				router.events.off('routeChangeComplete', handleRouteChange);
+				router.events.off('hashChangeComplete', handleRouteChange);
+			};
+		}
+		return;
 	}, [router.events]);
 
 	return (
