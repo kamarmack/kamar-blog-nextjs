@@ -98,7 +98,7 @@ const Home: NextPage = () => {
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://github.com/kamarmack/mackbook-io-nextjs"
+							href="https://github.com/kamarmack/kamar-blog-nextjs"
 						>
 							source code
 						</a>{' '}

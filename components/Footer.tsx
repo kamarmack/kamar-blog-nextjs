@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
 				<Prose>
 					<p className="mt-8" style={{ textAlign: 'center' }}>
 						©{year} – Created by&nbsp;
-						<a target="_blank" rel="noreferrer" href="https://mackbook.io">
+						<a target="_blank" rel="noreferrer" href="https://kamar.blog">
 							👨🏾‍💻 Kamar Mack
 						</a>
 					</p>

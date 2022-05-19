@@ -1,10 +1,10 @@
-# mackbook-io-nextjs
+# kamar-blog-nextjs
 
-![mackbook.io homepage](https://github.com/kamarmack/markdown-imgs/blob/master/images/mackbook-io-homepage.jpg?raw=true)
+![kamar.blog homepage](https://github.com/kamarmack/markdown-imgs/blob/master/images/mackbook-io-homepage.jpg?raw=true)
 
 ## Demo
 
-View the site live at [https://mackbook.io](https://mackbook.io)
+View the site live at [https://kamar.blog](https://kamar.blog)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -32,8 +32,8 @@ Stack:
 ## Running the Site Locally
 
 ```bash
-$ git clone https://github.com/kamarmack/mackbook-io-nextjs
-$ cd mackbook-io-nextjs
+$ git clone https://github.com/kamarmack/kamar-blog-nextjs
+$ cd kamar-blog-nextjs
 $ npm i
 $ npm run dev:watch
 ```

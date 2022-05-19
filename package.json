@@ -1,6 +1,6 @@
 {
 	"author": "Kamar Mack <https://github.com/kamarmack>",
-	"bugs": "https://github.com/kamarmack/mackbook-io-nextjs/issues",
+	"bugs": "https://github.com/kamarmack/kamar-blog-nextjs/issues",
 	"dependencies": {
 		"@sindresorhus/slugify": "^2.1.0",
 		"clsx": "^1.1.1",
@@ -41,7 +41,7 @@
 	"engines": {
 		"node": ">=11.14"
 	},
-	"homepage": "https://mackbook.io",
+	"homepage": "https://kamar.blog",
 	"keywords": [
 		"ci",
 		"git",
@@ -51,7 +51,7 @@
 		"typescript"
 	],
 	"license": "MIT",
-	"name": "mackbook-io-nextjs",
+	"name": "kamar-blog-nextjs",
 	"prettier": {
 		"arrowParens": "always",
 		"bracketSpacing": true,
@@ -67,7 +67,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/kamarmack/mackbook-io-nextjs.git"
+		"url": "git://github.com/kamarmack/kamar-blog-nextjs.git"
 	},
 	"scripts": {
 		"dev": "next dev",
